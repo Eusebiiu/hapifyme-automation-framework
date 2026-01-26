@@ -1,0 +1,32 @@
+<div>POST to https://test.hapifyme.com/api/user/register.php</div>
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+{
+    &quot;username&quot;: &quot;user_1769445304798&quot;,
+    &quot;email&quot;: &quot;user_1769445304798@test.com&quot;,
+    &quot;password&quot;: &quot;Password123!&quot;,
+    &quot;first_name&quot;: &quot;Initial&quot;,
+    &quot;last_name&quot;: &quot;User&quot;
+}    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Accept: */*</div>
+        <div>Content-Type: application/json</div>
+</div>
+
+
+
+<h4>Curl</h4>
+<div>
+curl -v -X POST &#39;https://test.hapifyme.com/api/user/register.php&#39; -H &#39;Accept: */*&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;username&quot;: &quot;user_1769445304798&quot;,
+    &quot;email&quot;: &quot;user_1769445304798@test.com&quot;,
+    &quot;password&quot;: &quot;Password123!&quot;,
+    &quot;first_name&quot;: &quot;Initial&quot;,
+    &quot;last_name&quot;: &quot;User&quot;
+}&#39;
+</div>

@@ -9,8 +9,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.awaitility.Awaitility;
 import org.awaitility.core.ConditionTimeoutException;
-
-import java.time.Duration;
+import java.util.concurrent.TimeUnit; // Adăugat pentru a asigura stabilitatea timpului
 
 import static io.restassured.RestAssured.given;
 
@@ -84,9 +83,10 @@ public class UserLifecycleTest extends BaseTest {
         // --- 5. WAIT FOR PROFILE ACTIVE ---
         System.out.println("\n[STEP 5] PROFILE READINESS CHECK (READ)");
         try {
+            // MODIFICARE AICI: Folosim TimeUnit pentru a evita conflictul de tip Duration
             Awaitility.await("Profile Availability")
-                    .atMost(Duration.ofSeconds(25))
-                    .pollInterval(Duration.ofSeconds(3))
+                    .atMost(25, TimeUnit.SECONDS)
+                    .pollInterval(3, TimeUnit.SECONDS)
                     .until(() -> {
                         boolean isReady = checkProfileStatus(bearerToken, apiKey, userId);
                         if (!isReady) System.out.println("   ... profile status not 'success' yet, retrying...");
