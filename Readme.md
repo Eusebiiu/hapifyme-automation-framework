@@ -1,39 +1,30 @@
-HapifyMe Automation Framework
-Acest proiect reprezintă framework-ul de testare automatizată pentru platforma HapifyMe, realizat ca proiect final pentru cursul de testare.
+# HapifyMe Automation Framework
 
-🚀 Tehnologii Utilizate
-Limbaj: Java
+Acest proiect reprezintă framework-ul de testare automatizată pentru platforma [HapifyMe](https://test.hapifyme.com), realizat ca proiect final pentru cursul de testare.
 
-Build Tool: Maven
+## 🚀 Tehnologii Utilizate
+* **Limbaj:** Java
+* **Build Tool:** Maven
+* **Testare API:** RestAssured
+* **Testare UI:** Selenium
+* **Reporting:** Allure Reports
+* **CI/CD:** GitHub Actions
 
-Testare API: RestAssured
+---
 
-Testare UI: Selenium WebDriver
+## 🛠️ Instrucțiuni de Rulare Locală
 
-Reporting: Allure Reports
-
-CI/CD: GitHub Actions
-
-🛠️ Instrucțiuni de Rulare Locală
 Pentru a rula testele pe mașina locală, urmează pașii de mai jos:
 
-Clonarea proiectului:
-
-Bash
-
-git clone https://github.com/Eusebiiu/hapifyme-automation-framework.git
-cd hapifyme-automation-framework
-Executarea testelor: Rulează toate testele folosind Maven:
-
-Bash
-
-mvn clean test
-Generarea raportului Allure: După finalizarea testelor, poți vizualiza rezultatele grafice cu:
-
-Bash
-
-mvn allure:serve
+1. **Clonarea proiectului:**
+   ```bash
+   git clone https://github.com/Eusebiiu/hapifyme-automation-framework.git
+   cd hapifyme-automation-framework
+2.Executarea testelor: Rulează toate testele folosind Maven:
+  mvn clean test
+3.Vizualizarea raportului Allure: După finalizarea testelor, rulează comanda pentru a porni serverul local:
+ mvn allure:serve
 🔄 Integrare Continuă (CI)
-Proiectul este integrat cu GitHub Actions. Pipeline-ul este configurat să ruleze automat la fiecare push pe branch-ul main.
+Proiectul utilizează un workflow de GitHub Actions definit în .github/workflows pentru execuția automată a testelor la fiecare push.
 
-Status Pipeline: <img width="1907" height="785" alt="image" src="https://github.com/user-attachments/assets/387a77fb-e65b-4be6-a6a6-0f88bb79f4e2" />
+Status Pipeline:<img width="1644" height="813" alt="image" src="https://github.com/user-attachments/assets/3a44dd50-af43-42b5-bebd-10766947ffcf" />
