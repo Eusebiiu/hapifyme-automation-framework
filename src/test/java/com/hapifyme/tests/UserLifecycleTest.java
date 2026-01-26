@@ -14,7 +14,7 @@ import java.time.Duration;
 
 import static io.restassured.RestAssured.given;
 
-public class UserLifecycleTest extends BaseTest { // --- MODIFICARE: Adăugat extends BaseTest ---
+public class UserLifecycleTest extends BaseTest {
     private String username, email, password;
     private String apiKey;
     private String bearerToken;
@@ -22,7 +22,6 @@ public class UserLifecycleTest extends BaseTest { // --- MODIFICARE: Adăugat ex
 
     @BeforeClass
     public void setup() {
-        // --- MODIFICARE: Eliminat RestAssured.baseURI (este deja în BaseTest prin requestSpec) ---
         email = DataGenerator.generateUniqueEmail();
         username = email.split("@")[0];
         password = "Password123!";

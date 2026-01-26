@@ -15,20 +15,17 @@ public class BaseTest {
 
     @BeforeSuite
     public void globalSetup() {
-        // Configurarea Allure pentru Selenide
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
                 .screenshots(true)
                 .savePageSource(false));
 
-        // Configurare Headless pentru GitHub Actions
         Configuration.headless = true;
         Configuration.browserSize = "1920x1080";
 
-        // Configurare API cu filtru Allure
         requestSpec = new RequestSpecBuilder()
                 .setBaseUri(ConfigManager.BASE_URL)
                 .setContentType(ContentType.JSON)
-                .addFilter(new AllureRestAssured()) // Logare apeluri API în raport
+                .addFilter(new AllureRestAssured())
                 .build();
     }
 }
