@@ -20,11 +20,11 @@ Pentru a rula testele pe mașina locală, urmează pașii de mai jos:
    ```bash
    git clone https://github.com/Eusebiiu/hapifyme-automation-framework.git
    cd hapifyme-automation-framework
-2.Executarea testelor: Rulează toate testele folosind Maven:
-  mvn clean test
-3.Vizualizarea raportului Allure: După finalizarea testelor, rulează comanda pentru a porni serverul local:
- mvn allure:serve
-🔄 Integrare Continuă (CI)
-Proiectul utilizează un workflow de GitHub Actions definit în .github/workflows pentru execuția automată a testelor la fiecare push.
+2.Executarea testelor: Rulează toate testele folosind Maven: </br>
+  mvn clean test</br>
+3.Vizualizarea raportului Allure: După finalizarea testelor, rulează comanda pentru a porni serverul local:</br>
+ mvn allure:serve</br>
+🔄 Integrare Continuă (CI)</br>
+Proiectul utilizează un workflow de GitHub Actions definit în .github/workflows pentru execuția automată a testelor la fiecare push.</br>
 
-Status Pipeline:<img width="1644" height="813" alt="image" src="https://github.com/user-attachments/assets/3a44dd50-af43-42b5-bebd-10766947ffcf" />
+Status Pipeline:</br><img width="1644" height="813" alt="image" src="https://github.com/user-attachments/assets/3a44dd50-af43-42b5-bebd-10766947ffcf" />
